@@ -11,7 +11,7 @@ REQUEST_LIMIT = 10  # limit the number of requests per IP within the time window
 
 @app.on_event("startup")
 async def startup_event():
-    app.state.redis = Redis.from_url('redis://localhost')
+    app.state.redis = Redis.from_url('redis://redis')
 
 @app.on_event("shutdown")
 async def shutdown_event():
